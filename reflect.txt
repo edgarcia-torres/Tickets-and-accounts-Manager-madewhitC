@@ -1,0 +1,105 @@
+ ===================================================================================
+  Assignment: 2 //  Milestone : 4
+ ===================================================================================
+  Student Name  : Edgar David Garcia Torres
+  Student ID    : 104433206
+  Student Email : edgarciat-torres@myseneca.ca
+  Course Section: ZZA
+ ===================================================================================
+ 1.
+
+a) commonHelpers.h
+None developed
+
+b) account.h
+
+void getpassword(struct Account* login);
+
+void getCountry(struct Account* demo);
+
+void archiveremovedAccount(struct Account* account, int remove);
+
+c) ticket.h
+
+void listActivetickets(struct AccountTicketingData* account);
+
+void listClosedtickets(struct AccountTicketingData* account);
+
+void manageTickets(struct AccountTicketingData* Tickets, struct Account* logged);
+
+void listNewtickets(struct AccountTicketingData* account);
+
+int findticketIndex(int ticketNum, struct AccountTicketingData* account);
+
+void createnewTicket(struct AccountTicketingData* tickets, struct Account* loged);
+
+void modifyTicket(struct AccountTicketingData* tickets, struct Account* loged);
+
+void removeticketsofaccount(struct AccountTicketingData* tickets, int removeaccount);
+
+int checkStoredticket(int numTicket, int max);
+
+void recreateTicketsfilecustomer(struct AccountTicketingData* tickets);
+
+void recreateTicketsfileAgent(struct AccountTicketingData* tickets, int max);
+
+void viewarchivedAccounts();
+
+void viewarchivedTickets();
+
+int  countTicketMessages(int max);
+
+void archiveclosedTickets(struct AccountTicketingData* tickets);
+
+d) accountTicketingUI.h
+
+int loadAccounts(struct Account* accounts, int max);
+
+int loadTickets(struct Ticket* tickets, int max);
+
+void menuCustomer(struct AccountTicketingData account[], struct Account* logged);
+
+void updateAccount(struct AccountTicketingData account[], int max);
+
+void updateUserLogin(struct Account* login);
+
+void updateDemographic(struct Account* demographic);
+
+
+ 2.
+The feature that I enjoyed developing was the reading, writing and appending information from files 
+I enjoyed this feature because I saw that my program now was able to handle information contained 
+out of the code of the program. This feature makes my program work with different sets of data 
+without changing the source code. It was amazing for me that it is the first program I make capable 
+of modifying or obtaining information from files. 
+When trying to read the data from the files and place it in the defined structures, this feature was a 
+bit overwhelming for me to develop but once my program was able to do the read from the files, 
+the writing and appending tasks were still challenging but  easier.
+
+
+The second feature that I enjoyed was the ability of the program to find the index of an account or 
+ticket with the ticket number or account number, this feature is easy to develop but very useful 
+when handling databases used this feature in many functions of the program. The assignment told 
+us to create a function to find the index of the accounts which is very clever because it returns an 
+integer  index based on a account number and this function could be called from anywhere. So I 
+developed a function to do the same but for the ticket records and found it very useful.
+
+3.
+The feature that I liked the less to develop was the multiple menus contained in other menus. 
+Although it makes the navigation easier for the user, the development part was difficult because it 
+requires a high level of organization, and the maintaining of the code requires to understand the 
+structure of the menus every time I am going to add a new functionality. It takes some time to 
+have a clear idea of the structure of the complete program. 
+I know if my program has comments along, it is easy for me to identify where I must add the new
+functionalities, but because of the hurry to submit the assignment every week. I admit that I forget 
+to add the comments, so when I come again to the program the first thing, I am obliged to do is 
+adding the comments
+
+the second thing that I liked the less to develop was the storing of strings in the structures.
+I did not enjoy this to much because many times I had issues when doing this.
+One common issue was that the writing in one field of the struct erased content in other fields 
+of the struct or sometimes erased the complete struct. The second common was that when trying 
+to store a string my program crashed because I did not assigned enough space to store the string. 
+This issues were frustrating because there was not a clear error message to tell me what  was 
+wrong, so it required some investigation to find out that had to be careful with the spaces in 
+memory assigned to every item.
